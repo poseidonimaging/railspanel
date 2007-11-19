@@ -14,8 +14,8 @@
 development:
   adapter: mysql
   database: railspanel_development
-  username: root
-  password:
+  username: railspanel
+  password: WN5CKCGqdvXvrnhb
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as 'test' will be erased and
@@ -24,13 +24,13 @@ development:
 test:
   adapter: mysql
   database: railspanel_test
-  username: root
-  password:
+  username: railspanel
+  password: WN5CKCGqdvXvrnhb
   socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql
   database: railspanel_production
-  username: root
-  password: 
+  username: railspanel
+  password: WN5CKCGqdvXvrnhb
   socket: /var/run/mysqld/mysqld.sock
