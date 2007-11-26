@@ -36,3 +36,22 @@ We have slightly modified the "default" BIND DLZ schema so that it is less
 wasteful of database resources, and so it makes more sense in models. 
 
 TODO: Put a working BIND DLZ configuration here
+
+== What the Rails Directories Are
+
+* app - The meat of the app lives here
+* components - If we were to add extra components they would be here.
+* config - The startup environment files and database configuration.
+* db - Database migrations and current schema
+* doc - Documentation (HTML)
+* lib - For custom library functions; mainly Rake tasks. (not used)
+* log - Log files.
+* public - Static HTML/CSS/JS/images.
+* script - Rails helper scripts
+* test - Unit tests (we haven't written any yet)
+* tmp - Temporary storage (e.g. sessions)
+* vendor - Vendor-supplied plugins and core-code (e.g. you can change a
+  Rails source file and place it in this folder somewhere and Rails will
+  execute the new code)
+
+So, we are only actually using app, config, db, public, and script.
