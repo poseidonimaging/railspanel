@@ -1,0 +1,9 @@
+<h2>Top Level Domains</h2>
+<% if @tlds.length > 0 %>
+<ul>
+	<% @tlds.each do |tld| %>
+		<li><%= link_to tld.extension, :action => "view_tld", :id => tld.id %></li>
+	<% end %>
+</ul>
+<% end %>
+<p><%= link_to "Add Top Level Domain", :action => "create_tld" %></p>

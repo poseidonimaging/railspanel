@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<% if @page_title == nil %>
+		<title>RailsPanel</title>
+	<% else %>
+		<title>RailsPanel - @page_title</title>
+	<% end %>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<%= stylesheet_link_tag "style" %>
+</head>
+<body>
+<h1>RailsPanel</h1>
+<%= @content_for_layout %>
+</body>
+</html>

@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 5) do
   end
 
   create_table "dns_tlds", :force => true do |t|
+    t.column "extension", :string, :limit => 4, :default => "", :null => false
   end
 
   create_table "dns_zones", :force => true do |t|

@@ -1,0 +1,15 @@
+body {
+	padding: 5px;
+	margin: 0;
+	font-size: 0.8em;
+}
+
+h1 {
+	border-bottom: 1px solid #000;
+}
+
+h2 {
+	font-size: 1em;
+}
+
+
