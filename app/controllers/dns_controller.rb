@@ -36,4 +36,21 @@ class DnsController < ApplicationController
 			end
 		end
 	end
+
+	# Destroy TLD
+	def destroy_tld
+		tld = DnsTld.find(params[:id])
+		tld.destroy
+		
+		# Get an updated list of TLDs
+		@tlds = DnsTld.find(:all)
+
+		# If the request is XMLHttpRequest (Ajax), just send back the
+		# updated chunk. Otherwise, redirect them to the index page.
+		if request.xhr?
+			render :partial => "tld_list"
+		else
+			redirect_to :action => "index"
+		end
+	end
 end

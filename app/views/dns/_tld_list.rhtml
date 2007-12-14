@@ -1,0 +1,20 @@
+<% if @tlds.length > 0 %>
+	<ul>
+	<% @tlds.each do |tld| %>
+		<li>
+	 	<%= link_to tld.extension, :action => "view_tld", :id => tld.id %>
+		<%= link_to_remote "(destroy)",
+				:update => "tld-list", 
+				:url => { :action => "destroy", :id => tld.id },
+				:confirm => "Are you sure you wish to delete the #{tld.extension} top level domain?",
+				:html => {
+					# Fallback for no javascript
+					:href => { :action => "destroy", :id => tld.id },
+					:class => "destroy"
+				}
+		%>
+		</li>
+	<% end %>
+	</ul>
+<% end %>
+
